@@ -98,6 +98,9 @@
             opacity: 1 !important;
             transform: translateY(0) !important;
         }
+        .card[for="c0"]{
+            background-image: url(ZERO.jpg);
+        }
         .card[for="c1"]{
             background-image: url(ONE.jpg);
         }
@@ -130,6 +133,9 @@
         .card[for="c10"]{
             background-image: url(TEN.jpg);
         }
+        .card[for="c108"]{
+            background-image: url(108.jpg);
+        }
     </style>
 </head>
 <body>
@@ -156,6 +162,9 @@
     </header>
 
     <div class="image-gallery">
+        <div class="image-container">
+            <img src="ZERO.jpg" alt="Image 0">
+        </div>
         <div class="image-container">
             <img src="ONE.jpg" alt="Image 1">
         </div>
@@ -186,9 +195,18 @@
         <div class="image-container">
             <img src="TEN.jpg" alt="Image 10">
         </div>
+        <div class="image-container">
+            <img src="108.jpg" alt="Image 108">
+        </div>
     </div>
     <div class="wrapper">
         <div class="container">
+            <input type="radio" name="slide" id="c0">
+            <label for="c0" class="card">
+                <div class="row">
+                    <div class="icon">0</div>
+                </div>
+            </label>
             <input type="radio" name="slide" id="c1">
             <label for="c1" class="card">
                 <div class="row">
@@ -251,6 +269,12 @@
             <label for="c10" class="card">
                 <div class="row">
                     <div class="icon">10</div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c108">
+            <label for="c108" class="card">
+                <div class="row">
+                    <div class="icon">108</div>
                 </div>
             </label>
         </div>
