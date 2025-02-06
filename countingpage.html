@@ -98,6 +98,9 @@
             opacity: 1 !important;
             transform: translateY(0) !important;
         }
+       .card[for="c0"]{
+            background-image: url(ZERO.jpg);
+        }
         .card[for="c1"]{
             background-image: url(ONE.jpg);
         }
@@ -130,9 +133,21 @@
         .card[for="c10"]{
             background-image: url(TEN.jpg);
         }
+      .card[for="c108"]{
+            background-image: url(108.jpg);
+        }
     </style>
+
 </head>
 <body>
+    <!-- Scroll -->
+    <div id="scrollButton" class="hidden">
+        <div class="outer-circle">
+            <div class="inner-circle">
+                <div class="arrow">↑</div>
+            </div>
+        </div>
+    </div>
     <header>
         <nav>
             <a href="index.html" class="logo">मातृबोधः</a>
@@ -144,18 +159,23 @@
                     <ul class="dropdown-content">
                         <li><a href="countingpage.html">Counting</a></li>
                         <li><a href="#">Days</a></li>
-                        <li><a href="#">Activities</a></li>
+                        <li><a href="activities.html">Activities</a></li>
                         <li><a href="feedback.html">Feedback</a></li>
                     </ul>
                 </li>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="toggle-menu">☰</div>
         </nav>
     </header>
 
+
     <div class="image-gallery">
+        <div class="image-container">
+            <img src="ZERO.jpg" alt="Image 0">
+        </div>
         <div class="image-container">
             <img src="ONE.jpg" alt="Image 1">
         </div>
@@ -186,9 +206,19 @@
         <div class="image-container">
             <img src="TEN.jpg" alt="Image 10">
         </div>
+        <div class="image-container">
+            <img src="108.jpg" alt="Image 108">
+        </div>
     </div>
+
     <div class="wrapper">
         <div class="container">
+           <input type="radio" name="slide" id="c0">
+            <label for="c0" class="card">
+                <div class="row">
+                    <div class="icon">0</div>
+                </div>
+            </label>
             <input type="radio" name="slide" id="c1">
             <label for="c1" class="card">
                 <div class="row">
@@ -253,71 +283,143 @@
                     <div class="icon">10</div>
                 </div>
             </label>
+           <input type="radio" name="slide" id="c108">
+            <label for="c108" class="card">
+                <div class="row">
+                    <div class="icon">108</div>
+                </div>
+            </label>
         </div>
     </div>
-    <footer class="main-footer">    
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>मातृबोधः</h3>
-                <p>Educating children through India's timeless wisdom and cultural heritage.</p>
-                <div class="social-links">
-                    <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="/index.html#hero">Home</a></li>
-                    <li><a href="/index.html#wisdom">About Us</a></li>
-                    <li><a href="/index.html#content">Our Courses</a></li>
-                    <!-- need to add contact page link -->
-                    <li><a href="/index.html#hero">Contact</a></li>
-                </ul>
-            </div>
-    
-            <div class="footer-section">
-                <h4>Learning Paths</h4>
-                <ul>
-                    <!-- need to add respective page link -->
-                    <li><a href="countingpage.html">Counting</a></li>
-                    <li><a href="#hero">Days</a></li>
-                    <li><a href="#hero">Activities</a></li>
-                </ul>
-            </div>
-    
-            <div class="footer-section">
-                <h4>Contact Us</h4>
-                <ul class="contact-info">
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@matrubodhah.edu">info@matrubodhah.edu</a></li>
-                    <li><i class="fas fa-map-marker-alt"></i><span>India</span></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2024 मातृबोधः. Made with <span class="heart">❤️</span> by <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">@Sakthi</a></p>
-        </div>
-    </footer>
+
+
+<!-- Updated Footer Section --> 
+<footer class="main-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>मातृबोधः</h3>
+      <p>
+        Educating children through India's timeless wisdom and cultural
+        heritage.
+      </p>
+      <div class="social-links">
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="YouTube"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Linkedin"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+      </div>
+
+      <!-- GitHub Star Button -->
+      <div class="github-star">
+        <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">
+          <i class="fab fa-github"></i> Star on GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links <div class="underline"><span></span></div></h4>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#wisdom">About Us</a></li>
+        <li><a href="#content">Our Courses</a></li>
+        <li><a href="#hero">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Learning Paths <div class="underline"><span></span></div></h4>
+      <ul>
+        <li><a href="countingpage.html">Counting</a></li>
+        <li><a href="#hero">Days</a></li>
+        <li><a href="#hero">Activities</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Newsletter <div class="underline"><span></span></div></h4>
+      <form>
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Enter your email id" required>
+        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+      </form>
+      <br>
+      <h4>Contact Us <div class="underline"><span></span></div></h4>
+      <ul class="contact-info">
+        <li>
+          <i class="fas fa-envelope"></i
+          ><a href="mailto:info@matrubodhah.edu">info@matrubodhah.edu</a>
+        </li>
+        <li><i class="fas fa-map-marker-alt"></i><span>India</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>
+      &copy; 2024 मातृबोधः. Made with <span class="heart">❤️</span> by
+      <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank"
+        >@Sakthi</a>
+    </p>
+  </div>
+</footer>
+
+      <script
+      src="//code.tidio.co/5w3m6cpl10rvqjkkmhv1nx8p0fqloyq6.js"
+      async>
+     </script>
+    <script src="scrollscript.js"></script>
+    <script src="audio.js"></script>
+    <!-- Scroll to Top Button -->
     <script>
-        let next = document.querySelector('.next')
-let prev = document.querySelector('.prev')
-
-next.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').appendChild(items[0])
-})
-
-prev.addEventListener('click', function(){
-    let items = document.querySelectorAll('.item')
-    document.querySelector('.slide').prepend(items[items.length - 1]) 
-})
-    </script>
-    <script src="index.js"></script>
+        const scrollButton = document.getElementById('scrollButton');
+        const outerCircle = document.querySelector('.outer-circle');
+        const arrow = document.querySelector('.arrow');
+    // Function to handle scroll behavior
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollProgress = (scrollTop / scrollHeight) * 360;
+   // Show button after scrolling 7-8 lines (~100px)
+            if (scrollTop > 100) {
+                scrollButton.classList.add('visible');
+            } else {
+                scrollButton.classList.remove('visible');
+            }
+            // Update the circular progress
+            outerCircle.style.setProperty('--scroll-progress', `${scrollProgress}deg`);
+        });
+        // Scroll-to-top functionality
+        scrollButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+</script>
+<script src="index.js"></script>
+    
 </body>
-
 </html>
